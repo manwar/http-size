@@ -60,7 +60,7 @@ use LWP::UserAgent;
 use URI;
 use HTTP::Request;
 
-$VERSION = 0.2;
+$VERSION = 0.4;
 
 my $User_agent = LWP::UserAgent->new();
 
