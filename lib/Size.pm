@@ -1,5 +1,6 @@
 # $Id$
 package HTTP::Size;
+use strict;
 
 =head1 NAME
 
@@ -53,7 +54,8 @@ package.
 use subs qw( get_size _request );
 use vars qw(
 	$ERROR $HTTP_STATUS $VERSION
-	$INVALID_URL $COULD_NOT_FETCH $BAD_CONTENT_TYPE
+	$INVALID_URL $COULD_NOT_FETCH $BAD_CONTENT_LENGTH
+	$CONTENT $CONTENT_TYPE
 	);
 
 use LWP::UserAgent;
@@ -122,7 +124,7 @@ sub get_size
 
 	unless( not $method and $response->is_success and $size )
 		{
-		$request     = HTTP::Request->new( GET => $url->as_string );
+		my $request  = HTTP::Request->new( GET => $url->as_string );
 		$response    = _request( $request );
 		$HTTP_STATUS = $response->code;
 		$CONTENT     = $response->content;
