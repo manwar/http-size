@@ -1,5 +1,9 @@
 # $Id$
 
+0.91 - Tue Sep  7 20:36:20 2004
+* cleaned up distro and added README
+* no need to upgrade
+
 0.9 - Sun Jul  4 12:26:33 2004
 * get_sizes() now returns the hash reference in list context
 * get_sizes() should download javascript and style sheets, but doesn't
