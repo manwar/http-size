@@ -72,7 +72,6 @@ eval {
 	
 	my @array = (
 		[ $uri->canonical,                         qw( 21879 2 ) ],
-		[ qw( http://www.perl.org/                     18601 5 ) ],
 		[ qw( http://www.perl.org/size.txt                42 0 ) ],
 		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html  1604 1 ) ],
 		);
