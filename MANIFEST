@@ -1,8 +1,11 @@
 # $Id$
-t/00.load.t
-t/01.get_size_net.t
+t/test_manifest
+t/compile.t
+t/pod.t
+t/get_size.net.t
 t/test.html
 t/perl_ad.png
 Makefile.PL
 MANIFEST
 lib/Size.pm
+META.yml                                 Module meta-data (added by MakeMaker)
