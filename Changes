@@ -1,5 +1,8 @@
 # $Id$
 
+0.91 - Fri Oct  8 15:48:59 2004
+* no need to upgrade - just added strictures
+
 0.91 - Tue Sep  7 20:36:20 2004
 * cleaned up distro and added README
 * no need to upgrade
