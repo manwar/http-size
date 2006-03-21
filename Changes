@@ -1,5 +1,11 @@
 # $Id$
 
+0.92 - Tue Mar 21 13:22:08 2006
+	* I moved my personal web account to Pair.com, so I had to update some
+	of the test addresses in the test files
+	* I fixed a couple of doc nits
+	* No need to upgrade if you already have this installed
+
 0.91 - Fri Oct  8 15:48:59 2004
 * no need to upgrade - just added strictures
 
