@@ -1,4 +1,5 @@
 # $Id$
 compile.t
 pod.t
+pod_coverage.t
 get_size.net.t

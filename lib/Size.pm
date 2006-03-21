@@ -16,15 +16,15 @@ HTTP::Size - Get the byte size of an internet resource
 		{
 		print "$url size was $size";
 		}
-	elsif( HTTP::Size::ERROR == $HTTP::Size::INVALID_URL )
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::INVALID_URL )
 		{
 		print "$url is not a valid absolute URL";
 		}
-	elsif( HTTP::Size::ERROR == $HTTP::Size::COULD_NOT_FETCH )
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::COULD_NOT_FETCH )
 		{
 		print "Could not fetch $url\nHTTP status is $HTTP::Size::HTTP_STATUS";
 		}
-	elsif( HTTP::Size::ERROR == $HTTP::Size::BAD_CONTENT_LENGTH )
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::BAD_CONTENT_LENGTH )
 		{
 		print "Could not determine content length of $url";
 		}
@@ -62,7 +62,7 @@ use LWP::UserAgent;
 use URI;
 use HTTP::Request;
 
-$VERSION = 0.91;
+$VERSION = 0.92;
 
 my $User_agent = LWP::UserAgent->new();
 
@@ -266,7 +266,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2000-2004, brian d foy, All Rights Reserved.
+Copyright (c) 2000-2006, brian d foy, All Rights Reserved.
 
 You may redistribute this under the same terms as Perl itself.
 

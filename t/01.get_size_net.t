@@ -37,8 +37,8 @@ my $connected = LWP::Simple::get( 'http://www.yahoo.com' );
 eval {
 	my @array = (
 		[ $uri->canonical,                           qw( 263 ) ],
-		[ qw( http://www.panix.com/~comdog/for/http-size/title.png      5398 ) ],
-		[ qw( http://www.panix.com/~comdog/for/http-size/size.txt                42 ) ],
+		[ qw( http://www.pair.com/~comdog/for/http-size/title.png      5398 ) ],
+		[ qw( http://www.pair.com/~comdog/for/http-size/size.txt         42 ) ],
 		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html  1604 ) ],
 		);
 		
