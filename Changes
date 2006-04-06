@@ -1,5 +1,10 @@
 # $Id$
 
+0.93 - Thu Apr  6 10:50:07 2006
+	* The MANIFEST was missing the Changes file, so I've fixed that
+	so you can read this statement. 
+	* There's no need to upgrade
+
 0.92 - Tue Mar 21 13:22:08 2006
 	* I moved my personal web account to Pair.com, so I had to update some
 	of the test addresses in the test files
