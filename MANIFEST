@@ -9,4 +9,5 @@ Makefile.PL
 MANIFEST
 lib/Size.pm
 META.yml                                 Module meta-data (added by MakeMaker)
+Changes
 README
