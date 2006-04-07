@@ -1,5 +1,9 @@
 # $Id$
 
+0.94 - Fri Apr  7 11:03:16 2006
+	* Updated the Makefile.PL for various nits
+	* No need to upgrade
+
 0.93 - Thu Apr  6 10:50:07 2006
 	* The MANIFEST was missing the Changes file, so I've fixed that
 	so you can read this statement. 
