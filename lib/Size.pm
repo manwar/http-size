@@ -62,7 +62,7 @@ use LWP::UserAgent;
 use URI;
 use HTTP::Request;
 
-$VERSION = 0.94;
+$VERSION = sprintf "%d.02d", q$Revision$ =~ m/ (\d+) \. (\d+) /xg;
 
 my $User_agent = LWP::UserAgent->new();
 

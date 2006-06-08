@@ -1,13 +1,14 @@
-# $Id$
-t/test_manifest
-t/compile.t
-t/pod.t
-t/get_size.net.t
-t/test.html
-t/perl_ad.png
+.lwpcookies
+Changes
+lib/Size.pm
 Makefile.PL
 MANIFEST
-lib/Size.pm
-META.yml                                 Module meta-data (added by MakeMaker)
-Changes
+META.yml			Module meta-data (added by MakeMaker)
 README
+t/compile.t
+t/get_size.net.t
+t/perl_ad.png
+t/pod.t
+t/pod_coverage.t
+t/test.html
+t/test_manifest
