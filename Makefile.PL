@@ -6,6 +6,7 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'	       => 'HTTP::Size',
 	'VERSION_FROM' => 'lib/Size.pm',
+	'LICENSE'       => 'perl',
 
 	'PREREQ_PM'    => { 
 		'HTTP::Request'         => '0',
@@ -21,6 +22,8 @@ WriteMakefile(
 		'lib/Size.pm' => '$(INST_MAN3DIR)/HTTP::Size.3',
 		},
 
+	'LICENSE'      => 'perl',
+	
 	clean  => { FILES    => q|*.bak HTTP-Size-*| },
 
 	);
