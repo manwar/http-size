@@ -1,5 +1,9 @@
 # $Id$
 
+1.12 - Tue Jan  9 22:26:49 2007
+	* updated copyright and license info
+	* no code changes, so no need to upgrade
+
 1.11 - Thu Jun  8 07:44:41 2006
 	* Distro cleanup - bumped version to stable number. No need to 
 	upgrade.
