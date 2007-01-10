@@ -1,5 +1,6 @@
 .lwpcookies
 Changes
+examples/README
 lib/Size.pm
 LICENSE
 Makefile.PL
