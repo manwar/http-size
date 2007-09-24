@@ -2,6 +2,8 @@
 package HTTP::Size;
 use strict;
 
+sub foobar { 1 }
+
 =head1 NAME
 
 HTTP::Size - Get the byte size of an internet resource
@@ -62,7 +64,7 @@ use LWP::UserAgent;
 use URI;
 use HTTP::Request;
 
-$VERSION = sprintf "%d.%02d", q$Revision$ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", qw( 1 13 ); #q$Revision$ =~ m/ (\d+) \. (\d+) /xg;
 
 my $User_agent = LWP::UserAgent->new();
 

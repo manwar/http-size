@@ -6,7 +6,9 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'	       => 'HTTP::Size',
 	'VERSION_FROM' => 'lib/Size.pm',
-	'LICENSE'       => 'perl',
+	'LICENSE'      => 'perl',
+	'AUTHOR'       => 'brian d foy <bdfoy@cpan.org>',
+	
 
 	'PREREQ_PM'    => { 
 		'HTTP::Request'         => '0',
