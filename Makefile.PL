@@ -1,14 +1,16 @@
 # $Id$
 use ExtUtils::MakeMaker;
 
+require 5.006;
+
 eval "use Test::Manifest 1.14";
 
 WriteMakefile(
 	'NAME'	       => 'HTTP::Size',
+	'ABSTRACT'     => 'Get the byte size of an internet resource',
 	'VERSION_FROM' => 'lib/Size.pm',
 	'LICENSE'      => 'perl',
 	'AUTHOR'       => 'brian d foy <bdfoy@cpan.org>',
-	
 
 	'PREREQ_PM'    => { 
 		'HTTP::Request'         => '0',
@@ -24,8 +26,6 @@ WriteMakefile(
 		'lib/Size.pm' => '$(INST_MAN3DIR)/HTTP::Size.3',
 		},
 
-	'LICENSE'      => 'perl',
-	
 	clean  => { FILES    => q|*.bak HTTP-Size-*| },
 
 	);

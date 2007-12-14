@@ -2,8 +2,6 @@
 package HTTP::Size;
 use strict;
 
-sub foobar { 1 }
-
 =head1 NAME
 
 HTTP::Size - Get the byte size of an internet resource
