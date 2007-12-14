@@ -1,6 +1,8 @@
 # $Id$
 package HTTP::Size;
 use strict;
+use warnings;
+no warnings;
 
 =head1 NAME
 
