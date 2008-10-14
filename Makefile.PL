@@ -16,6 +16,9 @@ WriteMakefile(
 		'HTTP::Request'         => '0',
 		'URI'                   => '0',
 		'HTML::SimpleLinkExtor' => '0',
+		'LWP::Simple'           => '0',
+		'LWP::UserAgent'        => '0',
+		'URI::file'             => '0',
 		},
 
 	'PM'           => {
