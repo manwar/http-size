@@ -3,7 +3,7 @@
 package HTTP::Size;
 use strict;
 use vars qw($INVALID_URL $ERROR $HTTP_STATUS);
-use Test::More tests => 31;
+use Test::More 'no_plan';
 
 use_ok( 'HTTP::Size' );
 
@@ -35,9 +35,17 @@ my @array = (
 	[ $uri->canonical,                                          qw( 263 21879 2) ],
 	[ qw( http://www.pair.com/~comdog/for/http-size/title.png      5398  5398 1) ],
 	[ qw( http://www.pair.com/~comdog/for/http-size/size.txt         42    42 1) ],
-	[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html                 1604  1604 1) ],
 	);
-	
+
+{
+my $ftp_url = 'ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html';
+my $length = length(  LWP::Simple::get( $ftp_url) );
+last unless $length;
+diag( "Remote FTP URL has size $length" );
+
+push @array, [ $ftp_url, $length, $length, 1 ];
+}
+
 foreach my $element ( @array )
 	{		
 	my $url          = $element->[0];
