@@ -1,5 +1,8 @@
 # Changes for HTTP::Size
 
+1.14 - Wed May 28 17:14:45 2014
+	* Promote to a release version
+
 1.13_01 - Tue Oct 14 09:59:21 2008
 	* Future-proofing the tests that check the size of certain
 	remote resources. People keep changing their size :(
