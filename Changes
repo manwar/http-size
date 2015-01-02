@@ -17,7 +17,7 @@
 	* no code changes, so no need to upgrade
 
 1.11 - Thu Jun  8 07:44:41 2006
-	* Distro cleanup - bumped version to stable number. No need to 
+	* Distro cleanup - bumped version to stable number. No need to
 	upgrade.
 
 0.00 - Thu Jun  8 07:41:59 2006
@@ -30,7 +30,7 @@
 
 0.93 - Thu Apr  6 10:50:07 2006
 	* The MANIFEST was missing the Changes file, so I've fixed that
-	so you can read this statement. 
+	so you can read this statement.
 	* There's no need to upgrade
 
 0.92 - Tue Mar 21 13:22:08 2006
