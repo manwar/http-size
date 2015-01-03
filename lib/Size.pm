@@ -1,4 +1,3 @@
-# $Id$
 package HTTP::Size;
 use strict;
 use warnings;

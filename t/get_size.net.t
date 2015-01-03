@@ -1,5 +1,3 @@
-#$Id$
-
 package HTTP::Size;
 use strict;
 use vars qw($INVALID_URL $ERROR $HTTP_STATUS);

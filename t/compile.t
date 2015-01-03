@@ -1,5 +1,3 @@
-# $Id$
-
 use Test::More tests => 1;
 
 print "Bail out! Could not compile HTTP::Size.\n"
