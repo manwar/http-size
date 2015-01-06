@@ -51,4 +51,5 @@ Revision history for Perl module HTTP::Size
 	* get_sizes() should download javascript and style sheets, but doesn't
 	* updated tests to use Test::More goodness
 
-0.04 - initial version
+0.04 - Sun Sep 30 00:11:00 2002	
+	* initial version
