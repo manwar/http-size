@@ -53,7 +53,7 @@ my %WriteMakefile = (
 			},
 		},
 
-	clean  => { FILES    => q|*.bak HTTP-Size-*| },
+	clean => { FILES => "$dist-*" },
 	);
 
 sub arguments { \%WriteMakefile }
