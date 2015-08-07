@@ -59,7 +59,8 @@
 
 
 \.releaserc
-.DS_Store
+\.DS_Store
+\.travis\.yml
 \.gz
 HTTP-.*
 MANIFEST\.
