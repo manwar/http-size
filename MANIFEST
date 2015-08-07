@@ -1,6 +1,7 @@
 .travis.yml
 Changes
 examples/README
+INSTALL.SKIP
 lib/HTTP/Size.pm
 LICENSE
 Makefile.PL
