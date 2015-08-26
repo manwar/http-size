@@ -1,5 +1,8 @@
 Revision history for Perl module HTTP::Size
 
+1.15 2015-08-26T15:46:15Z
+	* Doc and distribution refreshmentsâno code changes
+
 1.14 - 2014-05-28
 	* Promote to a release version
 
