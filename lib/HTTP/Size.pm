@@ -13,20 +13,16 @@ HTTP::Size - Get the byte size of an internet resource
 
 	my $size = HTTP::Size::get_size( $url );
 
-	if( defined $size )
-		{
+	if( defined $size ) {
 		print "$url size was $size";
 		}
-	elsif( $HTTP::Size::ERROR == $HTTP::Size::INVALID_URL )
-		{
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::INVALID_URL ) {
 		print "$url is not a valid absolute URL";
 		}
-	elsif( $HTTP::Size::ERROR == $HTTP::Size::COULD_NOT_FETCH )
-		{
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::COULD_NOT_FETCH ) {
 		print "Could not fetch $url\nHTTP status is $HTTP::Size::HTTP_STATUS";
 		}
-	elsif( $HTTP::Size::ERROR == $HTTP::Size::BAD_CONTENT_LENGTH )
-		{
+	elsif( $HTTP::Size::ERROR == $HTTP::Size::BAD_CONTENT_LENGTH ) {
 		print "Could not determine content length of $url";
 		}
 
@@ -63,7 +59,7 @@ use LWP::UserAgent;
 use URI;
 use HTTP::Request;
 
-$VERSION = '1.14';
+$VERSION = '1.15';
 
 my $User_agent = LWP::UserAgent->new();
 
@@ -94,19 +90,16 @@ On error, the function set $ERROR to one of these values:
 
 =cut
 
-sub get_size
-	{
+sub get_size {
 	my $url    = shift;
 	my $method = shift || 0;
 	_init();
 
-	unless( ref $url eq 'URI' )
-		{
+	unless( ref $url eq 'URI' ) {
 		$url = URI->new( $url );
 		}
 
-	unless( $url->scheme )
-		{
+	unless( $url->scheme ) {
 		$ERROR = $INVALID_URL;
 		return;
 		};
@@ -114,8 +107,7 @@ sub get_size
 	my $response = '';
 	my $size     = 0;
 
-	unless( $method )
-		{
+	unless( $method ) {
 		my $request = HTTP::Request->new( HEAD => $url->as_string );
 
 		$response    = _request( $request );
@@ -123,24 +115,20 @@ sub get_size
 		$size        = $response->content_length;
 		}
 
-	unless( not $method and $response->is_success and $size )
-		{
+	unless( not $method and $response->is_success and $size ) {
 		my $request  = HTTP::Request->new( GET => $url->as_string );
 		$response    = _request( $request );
 		$HTTP_STATUS = $response->code;
 		$CONTENT     = $response->content;
 
-		unless( $response->is_success )
-			{
+		unless( $response->is_success ) {
 			$ERROR = $COULD_NOT_FETCH;
 			return;
 			}
-		elsif( not $response->content_length )
-			{
+		elsif( not $response->content_length ) {
 			$size = length $CONTENT;
 			}
-		elsif( $response->content_length )
-			{
+		elsif( $response->content_length ) {
 			$size = $response->content_length;
 			}
 
@@ -184,8 +172,7 @@ Javascript and style sheet links are unimplemented right now.
 
 =cut
 
-sub get_sizes
-	{
+sub get_sizes {
 	my $url  = shift;
 	my $base = shift;
 
@@ -196,8 +183,7 @@ sub get_sizes
 	@{$hash{$url}}{ qw(size ERROR HTTP_STATUS) }
 		= ($size, $ERROR, $HTTP_STATUS);
 
-	unless( $size and $CONTENT_TYPE eq 'text/html' )
-		{
+	unless( $size and $CONTENT_TYPE eq 'text/html' ) {
 		return wantarray ? ( $size, \%hash ) : $size;
 		}
 
@@ -209,8 +195,7 @@ sub get_sizes
 
 	$extor->parse( $CONTENT );
 
-	foreach my $img ( $extor->img )
-		{
+	foreach my $img ( $extor->img ) {
 		my $size = get_size( $img ) || 0;
 
 		@{$hash{$img}}{ qw(size ERROR HTTP_STATUS) }
@@ -222,13 +207,11 @@ sub get_sizes
 	return wantarray ? ( $total, \%hash ) : $total;
 	}
 
-sub _init
-	{
+sub _init {
 	$ERROR = $CONTENT_TYPE = $CONTENT = $HTTP_STATUS = '';
 	}
 
-sub _request
-	{
+sub _request {
 	my $response = $User_agent->request( shift );
 
 	$HTTP_STATUS = $response->code;
