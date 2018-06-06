@@ -35,10 +35,10 @@ my $connected = LWP::Simple::get( 'http://www.yahoo.com' );
 
 eval {
 	my @array = (
-		[ $uri->canonical,                           qw( 263 ) ],
+		[ $uri->canonical,                                          qw( 263 ) ],
 		[ qw( http://www.pair.com/~comdog/for/http-size/title.png      5398 ) ],
 		[ qw( http://www.pair.com/~comdog/for/http-size/size.txt         42 ) ],
-		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html  1604 ) ],
+		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html                 1604 ) ],
 		);
 
 	foreach my $element ( @array )
@@ -70,9 +70,9 @@ print $@ ? 'not ' : '', "ok\n";
 eval {
 
 	my @array = (
-		[ $uri->canonical,                         qw( 21879 2 ) ],
-		[ qw( http://www.panix.com/~comdog/for/http-size/size.txt 42 0 ) ],
-		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html  1604 1 ) ],
+		[ $uri->canonical,                                   qw( 21879 2 ) ],
+		[ qw( http://www.panix.com/~comdog/for/http-size/size.txt   42 0 ) ],
+		[ qw( ftp://ftp.cpan.org/pub/CPAN/ROADMAP.html            1604 1 ) ],
 		);
 
 	foreach my $element ( @array )
