@@ -112,7 +112,8 @@ print $@ ? 'not ' : '', "ok\n";
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 eval {
 	print STDERR "\nFetching bad sites now.  Go do something else for awhile!\n";
-	my $url  = 'http://www.sri.net';
+	# macOS returns 200 for www.example.net!
+	my $url  = 'http://www.example.example.example.net';
 	my $size = HTTP::Size::get_size($url);
 	die "$url returned unexpected HTTP status [$HTTP_STATUS] expected [500]"
 		unless $HTTP_STATUS == 500;
