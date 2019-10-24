@@ -167,7 +167,7 @@ $HTTP_STATUS for that URL.
 The hash is always returned in list context (a change from
 version 0.4).
 
-Relative image links resolve accroding to BASE_URL, or by
+Relative image links resolve according to BASE_URL, or by
 a found BASE tag.  See L<HTML::SimpleLinkExtor>.
 
 Javascript and style sheet links are unimplemented right now.
